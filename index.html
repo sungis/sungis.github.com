@@ -1,1 +1,10 @@
-<h1>GotGitHub's HomePage</h1>It works.
+---
+layout: default
+title: Sungis Blog
+---
+
+<div class="span12"><h2>最新文章</h2></div>
+    {% for post in site.posts %}
+       <div class="span12">{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+    {% endfor %}
+
